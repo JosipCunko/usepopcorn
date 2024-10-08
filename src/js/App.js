@@ -302,12 +302,10 @@ function Summary({ watched }) {
 
   return (
     <div className="summary">
-      <h2>Movies you watched</h2>
+      <h2>
+        Movies you watched {watched.length > 0 ? `> ${watched.length}` : ""}
+      </h2>
       <div>
-        <p>
-          <span>#️⃣</span>
-          <span>{watched.length} movies</span>
-        </p>
         <p>
           <span>⭐️</span>
           <span>{avgImdbRating.toFixed(2)}</span>
